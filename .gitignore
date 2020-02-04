@@ -32,7 +32,8 @@ local.properties
 
 # Visual Studio Code
 #
-.vscode/
+# .vscode/
+.vscode/.react
 
 # node.js
 #
