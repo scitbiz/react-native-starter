@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "extends": [
+    "@react-native-community",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import"],
+  "ignorePatterns": ["node_modules", "android", "ios", "coverage", "tests"],
+  "rules": {
+    "import/named": "off",
+    "arrow-spacing": "warn",
+    "block-spacing": ["warn", "always"],
+    "brace-style": ["warn", "1tbs"],
+    "camelcase": "error",
+    "default-case": "error",
+    "eol-last": "warn",
+    "eqeqeq": "warn",
+    "global-require": "warn",
+    "max-len": ["warn", 100],
+    "max-lines": ["warn", 400],
+    "max-params": ["warn", 5],
+    "newline-before-return": "warn",
+    "no-cond-assign": ["error", "always"],
+    "no-console": "error",
+    "no-dupe-keys": "error",
+    "no-duplicate-case": "error",
+    "no-else-return": "warn",
+    "no-magic-numbers": "warn",
+    "prefer-const": "warn",
+    "prefer-template": "warn",
+    "quotes": ["error", "double"],
+    "semi": "off",
+    "arrow-parens": ["warn", "always"]
+  }
+}
