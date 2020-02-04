@@ -1,4 +1,5 @@
 import axios from "axios"
+import Configs from "react-native-config"
 
 import { commonErrorMessage, commonErrors } from "./errors"
 
@@ -7,7 +8,7 @@ const headers = {
 }
 
 const Request = axios.create({
-  // baseURL: Config.BASE_URL,
+  baseURL: Configs.BASE_URL,
   timeout: 10000,
   headers,
   // ... other configs
