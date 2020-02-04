@@ -1,16 +1,10 @@
 {
   "root": true,
-  "extends": [
-    "@react-native-community",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript"
-  ],
+  "extends": ["@react-native-community"],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "import"],
+  "plugins": ["@typescript-eslint"],
   "ignorePatterns": ["node_modules", "android", "ios", "coverage", "tests"],
   "rules": {
-    "import/named": "off",
     "arrow-spacing": "warn",
     "block-spacing": ["warn", "always"],
     "brace-style": ["warn", "1tbs"],
