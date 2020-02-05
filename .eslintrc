@@ -13,7 +13,7 @@
     "eol-last": "warn",
     "eqeqeq": "warn",
     "global-require": "warn",
-    "max-len": ["warn", 100],
+    "max-len": ["warn", 80],
     "max-lines": ["warn", 400],
     "max-params": ["warn", 5],
     "newline-before-return": "warn",

@@ -1,5 +1,3 @@
-declare var global: { HermesInternal: null | {} }
-
 declare module "react-native-config" {
   interface NativeConfig {
     BASE_URL: string
