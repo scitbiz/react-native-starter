@@ -10,7 +10,10 @@ const SPLASH_SCREEN_TIMEOUT = 1000
 
 const Splash = ({ navigation }: SplashProps) => {
   useEffect(() => {
-    const timeout = setTimeout(() => navigation.replace(Routes.MAIN), SPLASH_SCREEN_TIMEOUT)
+    const timeout = setTimeout(
+      () => navigation.replace(Routes.MAIN),
+      SPLASH_SCREEN_TIMEOUT,
+    )
 
     return () => clearTimeout(timeout)
   }, [navigation])

@@ -42,7 +42,11 @@ Request.interceptors.response.use(
       return Promise.reject(commonErrors[errorCode])
     }
 
-    if (errorData && errorData.message && commonErrorMessage.hasOwnProperty(errorData.message)) {
+    if (
+      errorData &&
+      errorData.message &&
+      commonErrorMessage.hasOwnProperty(errorData.message)
+    ) {
       return Promise.reject(commonErrorMessage[errorData.message])
     }
 

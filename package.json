@@ -10,8 +10,9 @@
     "ios:staging": "cross-env ENVFILE=.env.staging react-native run-ios",
     "ios:production": "cross-env ENVFILE=.env.production react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint .",
+    "test": "jest --no-cache --coverage",
+    "prettier": "prettier --write \"{src,__{tests|mocks}__}/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
@@ -46,24 +47,23 @@
     "@typescript-eslint/parser": "^2.12.0",
     "babel-jest": "^24.9.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "chai": "^4.2.0",
     "cross-env": "^7.0.0",
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.1",
     "jest": "^24.9.0",
+    "lint-staged": "^10.0.7",
     "metro-react-native-babel-preset": "^0.56.0",
+    "prettier": "^1.19.1",
     "react-test-renderer": "16.9.0",
     "redux-logger": "^3.0.6",
     "typescript": "^3.7.3"
   },
-  "jest": {
-    "preset": "react-native",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

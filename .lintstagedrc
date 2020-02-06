@@ -1,0 +1,4 @@
+{
+  "**/*.ts?(x)": ["eslint", "prettier --write"],
+  "__tests__/**/*.ts?(x)": ["jest --no-cache"]
+}

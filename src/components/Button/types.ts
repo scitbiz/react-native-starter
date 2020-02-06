@@ -1,4 +1,9 @@
-import { StyleProp, TextStyle, TouchableOpacityProps, ViewStyle } from "react-native"
+import {
+  StyleProp,
+  TextStyle,
+  TouchableOpacityProps,
+  ViewStyle,
+} from "react-native"
 
 export interface ButtonProps extends TouchableOpacityProps {
   readonly text: string

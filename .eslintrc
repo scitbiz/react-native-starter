@@ -3,7 +3,7 @@
   "extends": ["@react-native-community"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
-  "ignorePatterns": ["node_modules", "android", "ios", "coverage", "tests"],
+  "ignorePatterns": ["node_modules", "android", "ios", "coverage", "__tests__"],
   "rules": {
     "arrow-spacing": "warn",
     "block-spacing": ["warn", "always"],
