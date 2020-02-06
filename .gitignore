@@ -67,3 +67,6 @@ buck-out/
 # Enviroment
 .env.production
 .env.staging
+
+# Jest
+/coverage
