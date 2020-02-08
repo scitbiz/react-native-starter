@@ -1,17 +1,24 @@
+import "/languages/i18n"
 import "react-native-gesture-handler"
 
 import React from "react"
 import { StatusBar } from "react-native"
 import { Provider } from "react-redux"
 
-import AppContainer from "/navigators"
+import AppNavigator from "/navigators"
 import { store } from "/redux/store"
 
-const Root = () => (
-  <Provider store={store}>
-    <StatusBar backgroundColor="transparent" translucent />
-    <AppContainer />
-  </Provider>
-)
+const Root = () => {
+  return (
+    <Provider store={store}>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <AppNavigator />
+    </Provider>
+  )
+}
 
 export default Root

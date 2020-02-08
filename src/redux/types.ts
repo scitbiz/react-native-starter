@@ -1,3 +1,5 @@
+import { InferableComponentEnhancerWithProps } from "react-redux"
+
 export enum ReduxStateType {
   INIT,
   LOADING,
@@ -10,3 +12,10 @@ export interface ReduxState {
   state: ReduxStateType
   error?: Error
 }
+
+export type ReduxScreenProps<T> = T extends InferableComponentEnhancerWithProps<
+  infer P,
+  any
+>
+  ? P
+  : {}

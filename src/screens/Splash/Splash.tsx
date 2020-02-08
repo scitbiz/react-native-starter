@@ -1,17 +1,19 @@
+import { useNavigation } from "@react-navigation/native"
 import React, { useEffect } from "react"
 import { Text, View } from "react-native"
 
 import Routes from "/navigators/Routes"
 
 import styles from "./styles"
-import { SplashProps } from "./types"
 
 const SPLASH_SCREEN_TIMEOUT = 1000
 
-const Splash = ({ navigation }: SplashProps) => {
+const Splash = () => {
+  const navigation = useNavigation()
+
   useEffect(() => {
     const timeout = setTimeout(
-      () => navigation.replace(Routes.MAIN),
+      () => navigation.replace(Routes.MAIN, undefined),
       SPLASH_SCREEN_TIMEOUT,
     )
 

@@ -14,6 +14,7 @@ export default StyleSheet.create({
     textAlign: "justify",
     fontSize: 18,
     lineHeight: 24,
+    marginBottom: 16,
   },
   button: {
     marginTop: 20,

@@ -27,6 +27,7 @@
     "prefer-template": "warn",
     "quotes": ["error", "double"],
     "semi": "off",
-    "arrow-parens": ["warn", "always"]
+    "arrow-parens": ["warn", "always"],
+    "@typescript-eslint/no-unused-vars": "warn"
   }
 }
