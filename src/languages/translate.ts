@@ -1,6 +1,6 @@
 import i18n, { TranslateOptions } from "i18n-js"
 
-import * as translations from "./translations"
+import { LanguageKey } from "./types"
 
 /**
  * Translates text.
@@ -25,6 +25,6 @@ export const translate = (key: string, options: TranslateOptions = {}) => {
  *
  * @param languageKey The language key
  */
-export const switchLanguage = (languageKey: keyof typeof translations) => {
+export const switchLanguage = (languageKey: LanguageKey) => {
   i18n.locale = languageKey
 }

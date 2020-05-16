@@ -1,33 +1,37 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { SafeAreaView, Text, View } from "react-native"
 import Configs from "react-native-config"
 
 import { Button } from "/components"
-import useLanguage from "/utils/hooks/useLanguage"
+import { useLanguage } from "/utils/hooks/useLanguage"
 
 import styles from "./styles"
 
-const Main = () => {
-  const [language, setLanguage, languageCode] = useLanguage()
+export const Main = () => {
+  const [lang, setLanguage, languageCode] = useLanguage()
+
+  const isVietnamese = languageCode === "vi"
+  const nextLanguage = isVietnamese
+    ? lang.language.english
+    : lang.language.vietnamese
+
+  const onSwitchLanguagePress = useCallback(() => {
+    const nextLanguageCode = isVietnamese ? "en" : "vi"
+    setLanguage(nextLanguageCode)
+  }, [isVietnamese])
 
   return (
     <View style={styles.container}>
       <SafeAreaView>
         <Text style={styles.text}>React Native Starter</Text>
-        <Text>
-          {language.main.usingConfig(JSON.stringify(Configs))} {"\n"}
-          {language.main.language(language.name)}
-        </Text>
+        <Text>{Configs.BASE_URL}</Text>
+        <Text>{lang.youAreUsing(lang.name).withCode(languageCode)}</Text>
         <Button
           style={styles.button}
-          text={language.main.switchToLanguage(
-            languageCode === "vi" ? language.language.en : language.language.vi,
-          )}
-          onPress={() => setLanguage(languageCode === "vi" ? "en" : "vi")}
+          text={lang.switchTo(nextLanguage)}
+          onPress={onSwitchLanguagePress}
         />
       </SafeAreaView>
     </View>
   )
 }
-
-export default Main

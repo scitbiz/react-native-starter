@@ -5,7 +5,7 @@ import React from "react"
 import { StatusBar } from "react-native"
 import { Provider } from "react-redux"
 
-import AppNavigator from "/navigators"
+import { AppNavigator } from "/navigators"
 import { store } from "/redux/store"
 
 const Root = () => {

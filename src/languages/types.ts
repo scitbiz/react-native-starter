@@ -1,6 +1,8 @@
 import * as translations from "./translations"
 
-export const Locale: { [key in keyof typeof translations]: string } = {
+export type LanguageKey = keyof typeof translations
+
+export const Locale: { [key in LanguageKey]: string } = {
   en: "en-US",
   vi: "vi-VN",
 }
@@ -8,18 +10,22 @@ export const Locale: { [key in keyof typeof translations]: string } = {
 export interface AppLanguage {
   name: string
   language: {
-    en: string
-    vi: string
+    english: string
+    vietnamese: string
   }
   error: {
+    userNotFound: string
     unknownError: string
+    nothingFound: string
+    timeoutError: string
     unauthorized: string
     networkError: string
     systemError: string
   }
-  main: {
-    usingConfig: (config: string) => string
-    language: (config: string) => string
-    switchToLanguage: (language: string) => string
+  youAreUsing: (
+    language: string,
+  ) => {
+    withCode: (code: string) => string
   }
+  switchTo: (language: string) => string
 }

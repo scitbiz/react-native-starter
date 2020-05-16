@@ -7,7 +7,7 @@ import { AppAction } from "/redux"
 import { setLanguage } from "/redux/language/actions"
 import { languageSelector } from "/redux/language/selectors"
 
-const useLanguage = (): [
+export const useLanguage = (): [
   AppLanguage,
   (lang: ReturnType<typeof languageSelector>) => void,
   ReturnType<typeof languageSelector>,
@@ -21,5 +21,3 @@ const useLanguage = (): [
     language,
   ]
 }
-
-export default useLanguage

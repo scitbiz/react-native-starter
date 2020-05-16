@@ -3,8 +3,9 @@ import { I18nManager } from "react-native"
 import * as RNLocalize from "react-native-localize"
 
 import * as translations from "./translations"
+import { LanguageKey } from "./types"
 
-const fallback: { languageTag: keyof typeof translations; isRTL: boolean } = {
+const fallback: { languageTag: LanguageKey; isRTL: boolean } = {
   languageTag: "en",
   isRTL: false,
 }

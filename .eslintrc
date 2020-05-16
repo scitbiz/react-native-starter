@@ -1,8 +1,8 @@
 {
   "root": true,
-  "extends": ["@react-native-community"],
+  "extends": ["@react-native-community", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "prettier", "react-hooks"],
   "ignorePatterns": ["node_modules", "android", "ios", "coverage", "__tests__"],
   "rules": {
     "arrow-spacing": "warn",
@@ -13,7 +13,6 @@
     "eol-last": "warn",
     "eqeqeq": "warn",
     "global-require": "warn",
-    "max-len": ["warn", 80],
     "max-lines": ["warn", 400],
     "max-params": ["warn", 5],
     "newline-before-return": "warn",
@@ -28,6 +27,8 @@
     "quotes": ["error", "double"],
     "semi": "off",
     "arrow-parens": ["warn", "always"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
     "@typescript-eslint/no-unused-vars": "warn"
   }
 }

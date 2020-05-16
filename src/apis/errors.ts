@@ -1,8 +1,8 @@
 export const UNAUTHORIZED = new Error("error.unauthorized")
-export const NOT_FOUND_ERROR = new Error("error.notFound")
-export const NETWORK_ERROR = new Error("error.network")
+export const NOT_FOUND_ERROR = new Error("error.nothingFound")
+export const NETWORK_ERROR = new Error("error.networkError")
 export const TIMEOUT_ERROR = new Error("error.timeout")
-export const SYSTEM_ERROR = new Error("error.system")
+export const SYSTEM_ERROR = new Error("error.systemError")
 
 export const commonErrors: { [key: number]: Error } = {
   401: UNAUTHORIZED,
